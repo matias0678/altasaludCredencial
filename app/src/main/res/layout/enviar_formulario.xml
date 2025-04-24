@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="40dp"
+    android:layout_marginEnd="40dp"
+    android:padding="25dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <!-- ConstraintLayout dentro del CardView -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <!-- Línea naranja horizontal en la parte superior -->
+        <View
+            android:id="@+id/orangeLine"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Texto de título -->
+        <TextView
+            android:id="@+id/textViewTitle"
+            style="@style/MyCustomFontStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/title_text"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/orangeLine"
+            app:layout_constraintVertical_bias="0.5" />
+
+
+
+        <!-- Nombre y Apellido -->
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextName"
+            style="@style/MyCustomFontStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:hint="@string/name_hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
+
+        <!-- Tipo de Documento -->
+        <Spinner
+            android:id="@+id/spinnerDocumentType"
+            style="@style/MyCustomFontStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:entries="@array/document_types"
+            android:prompt="@string/select_document_type"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextName" />
+
+        <!-- Número de Documento -->
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextDocumentNumber"
+            style="@style/MyCustomFontStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:hint="@string/document_number_hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinnerDocumentType" />
+
+        <!-- Duración de la credencial -->
+        <TextView
+            android:id="@+id/textViewDuration"
+            style="@style/MyCustomFontStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/credential_duration_text"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextDocumentNumber" />
+
+        <!-- Botón para compartir credencial -->
+        <Button
+            android:id="@+id/buttonShareCredential"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_login"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/share_credential_text"
+            android:textColor="#FFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDuration" />
+        <!-- Espacio adicional en la parte inferior -->
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonShareCredential" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
