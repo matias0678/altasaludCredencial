@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ALTA SALUD</string>
+    <string name="logo_entidad_description">Logo-entidad</string>
+    <string name="title_text">Ingresá los datos de la persona con la cual compartirás la Credencial Digital</string>
+    <string name="name_hint">Nombre y Apellido</string>
+    <string name="select_document_type">Selecciona el tipo de documento</string>
+    <string-array name="document_types">
+        <item>DNI</item>
+        <item>CI</item>
+        <item>LC</item>
+        <item>LE</item>
+        <item>PAS</item>
+    </string-array>
+    <string name="document_number_hint">Número de Documento</string>
+    <string name="credential_duration_text">Esta credencial se podrá compartir solo 12 horas.</string>
+    <string name="share_credential_text">Compartí tu credencial</string>
+</resources>

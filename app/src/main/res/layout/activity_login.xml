@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azul800"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            app:srcCompat="@drawable/logoaltanuevoblanco"
+            android:contentDescription="@string/logo_entidad_description"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="#FFFFFF"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Spinner Tipo de documento -->
+                <Spinner
+                    android:id="@+id/spinnerTipoDocumento"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- txtNumDocumento-->
+                <EditText
+                    android:id="@+id/textViewNumDocumento"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Número de documento"
+                    android:textColor="#FF000000"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="17sp"
+                    android:background="#f2f2f2"
+                    android:padding="12dp"
+                    android:fontFamily="@font/myriadproblack"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- txtclave-->
+                <EditText
+                    android:id="@+id/textViewClave"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Contraseña"
+                    android:textColor="#FF000000"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="17sp"
+                    android:background="#f2f2f2"
+                    android:padding="12dp"
+                    android:fontFamily="@font/myriadproblack"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Botón "Login" -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@color/colorGris"
+                    android:text="Iniciar sesión"
+                    android:textColor="#FFF"
+                    android:fontFamily="@font/myriadproblack"
+                    android:textSize="22sp" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>
