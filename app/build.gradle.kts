@@ -5,13 +5,13 @@ plugins {
 
 android {
     namespace = "com.informaticasa.credencialdigital"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.informaticasa.credencialdigital"
         minSdk = 21
-        targetSdk = 34
-        versionCode = 18
+        targetSdk = 35
+        versionCode = 19
         versionName = "1.6"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -51,5 +51,6 @@ dependencies {
     implementation ("com.android.volley:volley:1.2.0")
     implementation ("com.squareup.picasso:picasso:2.71828")
     implementation ("androidx.cardview:cardview:1.0.0")
-
+    implementation ("androidx.core:core-ktx:1.12.0")
+    implementation ("androidx.activity:activity-ktx:1.8.2")
 }
