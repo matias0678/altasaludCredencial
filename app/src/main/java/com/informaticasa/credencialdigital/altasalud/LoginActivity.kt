@@ -152,10 +152,20 @@ class LoginActivity : AppCompatActivity() {
             try {
                 val connection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
-                connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded")
-                connection.doOutput = true
 
-                val postData = "tipdoc=${params[0]}&numdoc=${params[1]}&clave=${params[2]}"
+                // --- CAMBIO CLAVE: Configurar encabezados para JSON ---
+                connection.setRequestProperty("Content-Type", "application/json; charset=UTF-8")
+                connection.setRequestProperty("Accept", "application/json") // Opcional, pero buena práctica
+                connection.doOutput = true
+                // --- FIN CAMBIO CLAVE ---
+
+                // --- CAMBIO CLAVE: Construir el cuerpo de la solicitud como JSON ---
+                val jsonObject = JSONObject().apply {
+                    put("tipdoc", params[0])
+                    put("numdoc", params[1])
+                    put("clave", params[2]) // Asegúrate de que este nombre ('clave') coincida con lo que Laravel espera
+                }
+                val postData = jsonObject.toString()
                 val postDataBytes = postData.toByteArray(Charsets.UTF_8)
 
                 val outputStream: OutputStream = connection.outputStream

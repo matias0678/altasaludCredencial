@@ -66,29 +66,29 @@ class FirstActivity : AppCompatActivity() {
         }
     }
 
-    // These methods will now correctly inflate and handle your menu
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.action_logout -> {
-                borrarDatosSesion()
-                finish()
-                return true
-            }
-            R.id.action_exit -> {
-                finishAffinity()
-                return true
-            }
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
-    private fun borrarDatosSesion() {
-        val preferences = getSharedPreferences("mis_prefs", Context.MODE_PRIVATE)
-        preferences.edit().clear().apply()
-    }
+//    // These methods will now correctly inflate and handle your menu
+//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+//        menuInflater.inflate(R.menu.menu_main, menu)
+//        return true
+//    }
+//
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        when (item.itemId) {
+//            R.id.action_logout -> {
+//                borrarDatosSesion()
+//                finish()
+//                return true
+//            }
+//            R.id.action_exit -> {
+//                finishAffinity()
+//                return true
+//            }
+//        }
+//        return super.onOptionsItemSelected(item)
+//    }
+//
+//    private fun borrarDatosSesion() {
+//        val preferences = getSharedPreferences("mis_prefs", Context.MODE_PRIVATE)
+//        preferences.edit().clear().apply()
+//    }
 }
