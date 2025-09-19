@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
-    <domain-config>
+    <domain-config cleartextTrafficPermitted="false">
         <domain includeSubdomains="true">altasalud.com.ar</domain>
-        <trust-anchors>
-            <certificates src="@raw/certificado"/>
-        </trust-anchors>
     </domain-config>
 </network-security-config>
