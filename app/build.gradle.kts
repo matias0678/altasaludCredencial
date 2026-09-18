@@ -5,14 +5,14 @@ plugins {
 
 android {
     namespace = "com.informaticasa.credencialdigital"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.informaticasa.credencialdigital"
         minSdk = 21
-        targetSdk = 35
-        versionCode = 22
-        versionName = "1.6"
+        targetSdk = 36
+        versionCode = 25
+        versionName = "1.7"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled = true
